@@ -20,9 +20,6 @@ load_dotenv()
 
 API_KEY = os.getenv("GEMINI_API_KEY")
 
-st.write("API loaded:", API_KEY is not None)
-st.write("First 5 chars:", API_KEY[:5] if API_KEY else "None")
-
 genai.configure(api_key=API_KEY)
 
 model = genai.GenerativeModel("gemini-3.1-flash-lite")
